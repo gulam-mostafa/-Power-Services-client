@@ -6,6 +6,7 @@ import Main from "../Componenets/Main/Main";
 import MyReview from "../Componenets/MyReview/MyReview";
 import Navbar from "../Componenets/Navbar/Navbar";
 import FilterReview from "../Componenets/PeopleReviews/FilterReview";
+import ServiceAdd from "../Componenets/Services/ServiceAdd";
 import Services from "../Componenets/Services/Services";
 import Update from "../Componenets/Update/Update";
 import WriteReview from "../Componenets/WriteReview/WriteReview";
@@ -69,6 +70,10 @@ import PrivetRoutes from "./PrivetRoutes";
               path: '/update/:id',
               element: <Update></Update>,
               loader: ({params}) => fetch(`http://192.168.1.101:5000/myreview/${params.id}`)
+            },
+            {
+              path: '/serviceadd',
+              element: <PrivetRoutes><ServiceAdd></ServiceAdd></PrivetRoutes>
             }
         
           

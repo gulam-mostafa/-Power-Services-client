@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import logImg from './login .png'
 
 const Login = () => {
   
@@ -70,9 +71,9 @@ const Login = () => {
         <div className='bg-base-100 '>
             <div className="hero  bg-base-100">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className="text-justify lg:text-left -full lg:w-1/2 m-2">
-
-                        <p className="py-6 w-1/ ">A residential electrician is the most common type of electrician. They are typically responsible for installing, troubleshooting, maintaining, and upgrading electrical systems - this includes equipment in residential settings like homes, apartments, and condominiums.</p>
+                    <div className="text-justify  lg:text-left -full lg:w-1/2 m-2">
+                        <img src={logImg} alt="" />
+                        <p className="py-6 text-2xl text-emerald-500 ">A residential electrician is the most common type of electrician. They are typically responsible for installing, troubleshooting, maintaining, and upgrading electrical systems - this includes equipment in residential settings like homes, apartments, and condominiums.</p>
                     </div>
                     <div className="card flex-shrink-0 w-full text-white max-w-sm shadow-2xl bg-base-200">
                         <h1 className="text-5xl text-center font-bold">Login now!</h1>

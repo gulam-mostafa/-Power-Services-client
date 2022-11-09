@@ -12,7 +12,7 @@ const Footer = () => {
   <div>
     <span className="footer-title">Services</span> 
     <Link to='/myreview' className="link link-hover">My Reviews</Link> 
-    <Link className="link link-hover">Design</Link> 
+    <Link to="serviceadd" className="link link-hover">Service Add</Link> 
     <Link className="link link-hover">Marketing</Link> 
     <Link className="link link-hover">Advertisement</Link>
   </div> 

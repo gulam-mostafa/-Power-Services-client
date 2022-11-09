@@ -13,7 +13,7 @@ import { FcManager } from "react-icons/fc";
 const Navbar = () => {
 
   const { user, logOut } = useContext(AuthContext)
- 
+
   const handleLogOut = () => {
     logOut()
       .then(() => { })
@@ -83,7 +83,7 @@ const Navbar = () => {
                 {user?.photoURL ? (
                   <img className='rounded-xl mx-2'
                     style={{ height: "40px", width: "40px" }}
-                   
+
                     src={user?.photoURL}
                     alt={<FcManager />}
                   ></img>
@@ -111,12 +111,17 @@ const Navbar = () => {
           </div>
         </div>
         <div className='m-auto cusFlex hidde '>
-          <Link to="/home" className='no-underline mx-2 text-xl  text-black bg-violet-400 rounded-xl px-1 my-1 hover:bg-red-600'>Home</Link>
+          <div>
+            <Link to="/home" className='no-underline mx-2 text-xl  text-blue-400 font-bold  rounded px- my-1 hover:bg-red-600'>Home</Link>
 
-          <Link to='/myreview' className='no-underline mx-2 text-xl  text-black bg-violet-400 rounded-xl px-1 my-1 hover:bg-red-600'>Review</Link>
+            <Link to='/myreview' className='no-underline mx-2 text-xl   rounded px- my-1 hover:bg-red-600 text-orange-500  '>Review</Link>
 
-          <Link to='/services' className='no-underline mx-2 text-xl  text-black bg-violet-400 rounded-xl px-1 my-1 hover:bg-red-600'>Services</Link>
-          <Link to='blog' className='no-underline mx-2 text-xl  text-black bg-violet-400 rounded-xl px-1 my-1 hover:bg-red-600'>Blog</Link>
+            <Link to='/services' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-red-600'>Services</Link>
+          </div>
+
+          <div><Link to='/serviceadd' className='underline mx-2 text-xl  text-orange-500   rounded px- my-1 hover:bg-red-600'>Add_Services</Link>
+
+            <Link to='blog' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-red-600'>Blog</Link></div>
         </div>
       </div>
 

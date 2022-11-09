@@ -32,6 +32,7 @@ const WriteReview = () => {
           message,
           displayName,
           photoURL,
+          img,
         }
         fetch('http://192.168.1.101:5000/reviews', {
           method: "POST",

@@ -37,6 +37,7 @@ const DetailsPage = () => {
           </Link>
         </div>
       </div>
+      <h3 className='text-4xl text-center'>Review Area</h3>
       {/* peoples reviews  */}
       <div>
         <PeopleReviews

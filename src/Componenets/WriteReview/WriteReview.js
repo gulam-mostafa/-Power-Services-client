@@ -9,8 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const WriteReview = () => {
     const service = useLoaderData()
     // console.log(service)
-  const { title, _id, id, total, types, img, price, rating, description, } = service
+  const { title, _id, id, total, types, img, price, rating,  description, } = service
     const { user } = useContext(AuthContext)
+ 
     // const notify = () => toast("Wow so easy!");
     const writeReview = event => {
         event.preventDefault()
@@ -20,8 +21,11 @@ const WriteReview = () => {
         const email = user?.email || 'unregistered';
         const displayName = user?.displayName || 'not found';
         const photoURL = user?.photoURL || 'not found';
+       
         const review = {
+
           service: _id,
+        createdAt: new Date().toISOString(),
           serviceName: title,
           price,
           email,
@@ -39,17 +43,10 @@ const WriteReview = () => {
           .then(res => res.json())
           .then(data => {
             if (data.acknowledged) {
-            
               alert('Review Post successfully done')
-             
               form.reset();
-    
             }
-            
-            window.location.reload(setTimeout(2000));
-         
-          
-          
+            window.location.reload(setTimeout(2000)); 
           })
           .catch(er => console.error(er))
       }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ServiceAdd = () => {
     const [user, setUser] = useState();
@@ -16,15 +18,18 @@ const ServiceAdd = () => {
         })
         .then(res=> res.json())
         .then(data => {
-            
+            toast("delete successfully" , {
+                position: toast.POSITION.TOP_CENTER
+              });
             console.log(data)
         })
 
     }
     const HandleInputBlur = event => {
         const field = event.target.name;
+        
         const value = event.target.value;
-        const newUser = { ...user }
+        const newUser = {  createdAt: new Date().toISOString(), ...user,}
         newUser[field] = value;
         setUser(newUser)
 
@@ -42,6 +47,7 @@ const ServiceAdd = () => {
     
     <p className='text-red-600'>1. Id "Service Number"</p>
     <input onBlur={HandleInputBlur} type="text" placeholder="Id" name='id (id Means Service Number)' className="input input-bordered input-warning w-10/12 m-1 p-1 " />
+
     <p className='text-red-600'>2. Total Service done"</p>
     <input onBlur={HandleInputBlur} type="text" placeholder="total service done" name='total' className="input input-bordered input-warning w-10/12 m-1 p-1 " />
     <p className='text-red-600'>3. service Type new or Old</p>
@@ -58,11 +64,11 @@ const ServiceAdd = () => {
     <p className='text-red-600'>8. Service Title or name</p>
     <input onBlur={HandleInputBlur} type="text" placeholder="Title" name='title' className="input input-bordered input-warning w-10/12 m-1 p-1 " />
 
-    {/* <input onBlur={HandleInputBlur} type="text" placeholder="Title" name='title' className="input input-bordered input-warning w-10/12 m-1 p-1 " /> */}
+  
 <br />
     <button type='submit' className="btn btn-primary w-10/12 m-1 p-1 ">Add Service</button>
 
-
+    <ToastContainer />
 </form>
 </div>
         </div>

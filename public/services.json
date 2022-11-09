@@ -1,0 +1,74 @@
+[
+    {
+        
+        "id": "01",
+        "total": "11",
+        "types": "new",
+        "service_id": "01",
+        "title": "Air Condition Repair",
+        "img": "https://i.ibb.co/7jTHXRS/air-condition.jpg",
+        "price": "36.00",
+        "rating": "4.7",
+        "description": "Every One Hour Heating & Air Conditioning location is independently owned and operated so you can be certain that you’re getting a local expert. We’ll arrive at your home on time and work with your needs, preferences, and budget to make sure that you’re completely satisfied with our work! Every job by One Hour Heating & Air Conditioning is backed with the UWIN Guarantee. We also value your time as much as we value our own. So, if we don’t arrive at your house when you expect, we’ll pay you back. With us, there’s no more waiting around all day for an HVAC technician to arrive at your home!"
+       
+    },
+    {
+        "id": "02",
+        "total": "71",
+        "service_id": "02",
+        "title": "House Wiring",
+        "img": "https://i.ibb.co/q97gLVY/Screenshot-91.png",
+        "price": "24.00",
+        "rating": "4.4",
+        "description": "Different homes need different amp services. You may be wondering, Do I need 200 amp service With a bit of math, you can figure out what kind of electrical load your home requires. A 60-amp service, for example, is probably inadequate for a modern home, while a 100-amp service is good for a home of less than 3,000 square feet that does not have central air-conditioning or electric heat. A home larger than 2,000 square feet that has central air-conditioning or electric heat probably needs a 200-amp service. Use the equation listed in the graphic above to deduce exactly how many amps your home needs."
+       
+    },
+    {
+        "id": "03",
+        "total": "52",
+        "types": "new",
+        "service_id": "03",
+        "title": "Refrigerator Service",
+        "img": "https://i.ibb.co/vVMdGtW/refrigaratopr.png",
+        "price": "16.00",
+        "rating": "4.9",
+        "description": "Every One Hour Heating & Air Conditioning location is independently owned and operated so you can be certain that you’re getting a local expert. We’ll arrive at your home on time and work with your needs, preferences, and budget to make sure that you’re completely satisfied with our work! Every job by One Hour Heating & Air Conditioning is backed with the UWIN Guarantee. We also value your time as much as we value our own. So, if we don’t arrive at your house when you expect, we’ll pay you back. With us, there’s no more waiting around all day for an HVAC technician to arrive at your home!"
+       
+    },
+    {
+        
+        "id": "04",
+        "total": "31",
+        "service_id": "04",
+        "title": "Fan Repairing",
+        "img": "https://i.ibb.co/HFTGWtn/fan.png",
+        "price": "6.00",
+        "rating": "4.5",
+        "description": "Every One Hour Heating & Air Conditioning location is independently owned and operated so you can be certain that you’re getting a local expert. We’ll arrive at your home on time and work with your needs, preferences, and budget to make sure that you’re completely satisfied with our work! Every job by One Hour Heating & Air Conditioning is backed with the UWIN Guarantee. We also value your time as much as we value our own. So, if we don’t arrive at your house when you expect, we’ll pay you back. With us, there’s no more waiting around all day for an HVAC technician to arrive at your home!"
+       
+    },
+    {
+        "id": "05",
+        "total": "38",
+        "service_id": "02",
+        "title": "Television  Services",
+        "img": "https://i.ibb.co/4fX1K5d/tvrepair.png",
+        "price": "15.00",
+        "rating": "4.3",
+        "description": "Different homes need different amp services. You may be wondering, Do I need 200 amp service With a bit of math, you can figure out what kind of electrical load your home requires. A 60-amp service, for example, is probably inadequate for a modern home, while a 100-amp service is good for a home of less than 3,000 square feet that does not have central air-conditioning or electric heat. A home larger than 2,000 square feet that has central air-conditioning or electric heat probably needs a 200-amp service. Use the equation listed in the graphic above to deduce exactly how many amps your home needs."
+       
+    },
+    {
+        "id": "06",
+        "total": "45",
+        "types": "new",
+        "service_id": "03",
+        "title": "Broadband Connection",
+        "img": "https://i.ibb.co/wWKJwsP/wifi.gif",
+        "price": "4.00",
+        "rating": "4.8",
+        "description": "Every One Hour Heating & Air Conditioning location is independently owned and operated so you can be certain that you’re getting a local expert. We’ll arrive at your home on time and work with your needs, preferences, and budget to make sure that you’re completely satisfied with our work! Every job by One Hour Heating & Air Conditioning is backed with the UWIN Guarantee. We also value your time as much as we value our own. So, if we don’t arrive at your house when you expect, we’ll pay you back. With us, there’s no more waiting around all day for an HVAC technician to arrive at your home!"
+       
+    }
+    
+]

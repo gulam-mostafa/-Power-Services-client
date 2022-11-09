@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Update = () => {
     const  review = useLoaderData();
@@ -21,7 +23,9 @@ const Update = () => {
         .then(res => res.json())
         .then(data => {
             if(data.modifiedCount > 0) {
-                alert("Review Updated")
+              toast("Updated successfully" , {
+                position: toast.POSITION.TOP_CENTER
+              });
          
             }
             console.log(data)
@@ -43,9 +47,9 @@ const Update = () => {
   
             <br />
   
-            <input className="btn btn-active btn-accent w-full " type="submit" value="Write A Comment" />
+            <input className="btn btn-active btn-accent w-full " type="submit" value="Update Your Review"  />
   
-  
+            <ToastContainer />
           </form>
         </div>
     );

@@ -4,7 +4,7 @@ import './MyreviewCard.css'
 import { ToastContainer, toast } from 'react-toastify';
 
 const MyReviewCard = ({ comment, handleDelete }) => {
-    const { serviceName, price, email, message, displayName, photoURL ,_id} = comment;
+    const { serviceName, price, email, title, message, displayName, photoURL ,_id} = comment;
 
    
 
@@ -19,11 +19,8 @@ const MyReviewCard = ({ comment, handleDelete }) => {
                         <p>{displayName} <time datetime="2014-08-16 19:00" className="block text-sm text-gray-500 dark:text-gray-400">{email}</time></p>
                     </div>
                 </div>
-                <div className="flex items-center mb-1">
-
-                </div>
-
-                <p className="mb-2 font-light text-gray-500 dark:text-black font-semibold px-2 py-4">{message}</p>
+                <p className="mb-2 font-light text-gray-500 dark:text-black font-semibold px-2 py-4">Review For: {serviceName} price: $ {price} </p>
+                <p className="mb-2 font-light text-gray-500 dark:text-black font-semibold px-2 py-4">{message} </p>
             </article>
            <div className='flex'>
            <button onClick={()=> handleDelete(_id)} className="btn btn-circle btn-outline mr-3 mt-2 btn-xs">

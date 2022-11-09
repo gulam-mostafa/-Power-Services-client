@@ -112,16 +112,16 @@ const Navbar = () => {
         </div>
         <div className='m-auto cusFlex hidde '>
           <div>
-            <Link to="/home" className='no-underline mx-2 text-xl  text-blue-400 font-bold  rounded px- my-1 hover:bg-red-600'>Home</Link>
+            <Link to="/home" className='no-underline mx-2 text-xl  text-blue-400 font-bold  rounded px- my-1 hover:bg-gray-600'>Home</Link>
 
-            <Link to='/myreview' className='no-underline mx-2 text-xl   rounded px- my-1 hover:bg-red-600 text-orange-500  '>Review</Link>
+            <Link to='/myreview' className='no-underline mx-2 text-xl   rounded px- my-1 hover:bg-gray-600 text-orange-500  '>Review</Link>
 
-            <Link to='/services' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-red-600'>Services</Link>
+            <Link to='/services' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-gray-600'>Services</Link>
           </div>
 
-          <div><Link to='/serviceadd' className='underline mx-2 text-xl  text-orange-500   rounded px- my-1 hover:bg-red-600'>Add_Services</Link>
+          <div><Link to='/serviceadd' className='underline mx-2 text-xl  text-orange-500   rounded px- my-1 hover:bg-gray-600'>Add_Services</Link>
 
-            <Link to='blog' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-red-600'>Blog</Link></div>
+            <Link to='blog' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-gray-600'>Blog</Link></div>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './MyreviewCard.css'
+import { ToastContainer, toast } from 'react-toastify';
 
 const MyReviewCard = ({ comment, handleDelete }) => {
     const { serviceName, price, email, message, displayName, photoURL ,_id} = comment;
@@ -27,6 +28,7 @@ const MyReviewCard = ({ comment, handleDelete }) => {
            <div className='flex'>
            <button onClick={()=> handleDelete(_id)} className="btn btn-circle btn-outline mr-3 mt-2 btn-xs">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                <ToastContainer />
             </button>
           <Link to={`/update/${_id}`}>  <input type="reset" value="Edit" className="btn mr-3 mt-2 btn-xs" /></Link>
            </div>

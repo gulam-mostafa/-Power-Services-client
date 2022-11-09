@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import LimitCard from './LimitCard';
 
 const LimitData = () => {
@@ -10,7 +11,7 @@ const LimitData = () => {
     })
     return (
         <div>
-        <h2 className='text-center text-3xl font-bold text-orange-400'>Our total {services.length} services  </h2>
+        <h2 className='text-center text-3xl font-bold text-orange-400'>Our  services  </h2>
       <div className='grid grid-cols-1 m-auto md:grid-cols-2 lg;grid-cols-3 xl:grid-cols-3 mx-2 gap-2 '>
       {
             services.map(service => <LimitCard
@@ -18,6 +19,7 @@ const LimitData = () => {
                 key={service.id}></LimitCard>)
         }
       </div>
+   <Link to='/services' className='flex justify-center'>   <button className="btn btn-active btn-secondary w-1/4 my-4 mx-4 m-auto">See More Services</button></Link>
     </div>
     );
 };

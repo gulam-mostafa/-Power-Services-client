@@ -11,6 +11,7 @@ import Update from "../Componenets/Update/Update";
 import WriteReview from "../Componenets/WriteReview/WriteReview";
 import Login from "../Login/Login/Login";
 import Register from "../Login/Register/Register";
+import PrivetRoutes from "./PrivetRoutes";
 
 
  export  const routes = createBrowserRouter ([
@@ -56,7 +57,7 @@ import Register from "../Login/Register/Register";
             },
             {
               path: '/myreview',
-              element: <MyReview></MyReview>
+              element: <PrivetRoutes><MyReview></MyReview></PrivetRoutes>
               
             },
             {

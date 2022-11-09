@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./BannerItem.css";
 
 const BannerItem = ({slide}) => {
@@ -31,7 +32,7 @@ const {image, id, prev, next} = slide
           <a href={`#slide${next}`} className="btn btn-circle">
             ❯
           </a></div>
-          <button className="btn btn-info">Let's See</button>
+          <Link to='/services'><button className="btn btn-info">Let's See</button></Link>
         </div>
         
       </div>

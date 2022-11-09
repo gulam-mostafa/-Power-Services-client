@@ -8,7 +8,7 @@ const DetailsPage = () => {
   const service = useLoaderData()
   const { title, _id, id, total, types, img, price, rating, description, } = service
   const { user } = useContext(AuthContext)
-  console.log(user)
+  console.log(user?.uid)
 
 
   
@@ -37,7 +37,21 @@ const DetailsPage = () => {
         ></PeopleReviews>
       </div>
       <div className='flex justify-center '>
-        <WriteReview></WriteReview>
+      {
+        user?.uid? (
+          
+            <WriteReview></WriteReview>
+          
+        ):(
+         <div className='flex flex-col justify-center  w-full  align-center m-auto'>
+          <h2 className='text-blue-500 text-5xl m-auto my-4 font-bold '>You can add Review after log in!</h2>
+          <Link className='m-auto  my-4' to='/login'><button className="btn btn-warning text-3xl px-32">Please Log in</button></Link>
+
+         </div>
+        )
+
+      }
+       
       </div>
 
 

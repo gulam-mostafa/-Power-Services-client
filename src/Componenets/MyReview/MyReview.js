@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import MyReviewCard from './MyReviewCard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MyReview = () => {
     const { user } = useContext(AuthContext)
@@ -31,7 +33,10 @@ const MyReview = () => {
                     console.log(data);
 
                     if (data.deletedCount > 0) {
-                        alert(" delete successfully")
+                        // alert(" delete successfully")
+                        toast("delete successfully" , {
+                            position: toast.POSITION.TOP_CENTER
+                          });
                         const remaning = review.filter(revw => revw._id !== id)
                         setReview(remaning)
                     }

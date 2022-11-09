@@ -3,6 +3,8 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import PeopleReviews from '../PeopleReviews/PeopleReviews';
 import WriteReview from '../WriteReview/WriteReview';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const DetailsPage = () => {
   const service = useLoaderData()
@@ -15,7 +17,12 @@ const DetailsPage = () => {
   return (
     <div className='py-2'>
       <div className="card lg:card-side bg-base-100 shadow-xl">
-        <figure className=' '><img className='object-fill' src={img} alt="Album" /></figure>
+       
+        <PhotoProvider>
+      <PhotoView src={img}>
+      <figure className=' '><img className='object-fill' src={img} alt="Album" /></figure>
+      </PhotoView>
+    </PhotoProvider>
 
         <div className=" m-4 lg:w-3/5  xl:w-3/5  w-full">
           <h2 className=" py-3 text-orange-500 font-semibold text-4xl text-center ">{title}</h2>
@@ -45,7 +52,7 @@ const DetailsPage = () => {
         ):(
          <div className='flex flex-col justify-center  w-full  align-center m-auto'>
           <h2 className='text-blue-500 text-5xl m-auto my-4 font-bold '>You can add Review after log in!</h2>
-          <Link className='m-auto  my-4' to='/login'><button className="btn btn-warning text-3xl px-32">Please Log in</button></Link>
+          <Link className='m-auto  my-4' to='/login'><button className="btn btn-warning text-2xl px-16">Please Log in</button></Link>
 
          </div>
         )

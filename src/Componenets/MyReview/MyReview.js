@@ -16,7 +16,11 @@ const MyReview = () => {
     const [review, setReview] = useState([])
     console.log(review)
     useEffect(() => {
-        fetch(`http://192.168.1.101:5000/reviews?email=${user?.email}`)
+        fetch(`http://192.168.1.101:5000/reviews?email=${user?.email}`, {
+            headers: {
+                authorization: `bearer ${localStorage.getItem('token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setReview(data))
 

@@ -1,5 +1,11 @@
 .cusphoto {
-  width: 50px;
+  width: 20px;
   border-radius: 50px;
   border: 2px solid blue;
+}
+.cusphotos {
+  margin: auto;
+  width: 80px;
+  border-radius: 10px;
+  border: 2px solid rgb(75, 240, 10);
 }

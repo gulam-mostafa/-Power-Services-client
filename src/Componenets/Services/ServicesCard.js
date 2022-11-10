@@ -8,14 +8,14 @@ const ServicesCard = ({service}) => {
   
     const {types, title, img, price , rating , description, _id, } = service
     return (
-        <div className="card w-80 bg-base-100 shadow-xl m-auto ">
+        <div className="card w-80 bg-base-100 shadow-xl m-auto border rounded-lg border-b-emerald-300 my-4">
         {/* <figure><img src={img} alt="Shoes" /></figure> */}
         <PhotoProvider>
       <PhotoView src={img}>
       <figure><img src={img} alt="Shoes" /></figure>
       </PhotoView>
     </PhotoProvider>
-        <div className="card-body">
+        <div className="card-body  ">
           <h2 className="card-title">
            {title}
             <div className="rounded-xl  badge-secondary">{types}</div>

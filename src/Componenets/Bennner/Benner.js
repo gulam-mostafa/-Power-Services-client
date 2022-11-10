@@ -50,7 +50,7 @@ const BannerData = [
 const Benner = () => {
     return (
         <div>
-           <div className="carousel w-full py-10 ">
+           <div className="carousel w-full m-auto py-10 ">
       {BannerData.map((slide) => (
         <BannerItem key={slide.id} slide={slide}></BannerItem>
       ))}

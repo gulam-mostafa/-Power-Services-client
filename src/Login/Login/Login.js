@@ -50,12 +50,33 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+
+        const currentUser = {
+          email: user.email
+        }
+
+        console.log(currentUser);
         form.reset();
         setError("");
+        // get jwt toket 
+        fetch('http://192.168.1.101:5000/jwt',{
+          method: "POST",
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(currentUser)
+
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          localStorage.setItem('token' , data.token)
+        })
+
         navigate(from, { replace: true });
       })
       .catch((e) => {

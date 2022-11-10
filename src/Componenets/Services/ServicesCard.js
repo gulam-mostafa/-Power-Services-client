@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
+
 const ServicesCard = ({service}) => {
+  
     const {types, title, img, price , rating , description, _id, } = service
     return (
         <div className="card w-80 bg-base-100 shadow-xl m-auto ">

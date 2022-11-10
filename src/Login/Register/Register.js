@@ -7,8 +7,10 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import signUp from './sign_up.png'
+import { useTitleDi } from '../../hooks/useTitleDi';
 
 const Register = () => {
+  useTitleDi('Sign up')
     const [error, setError] = useState("");
     const [accepted, setAccepted] = useState(false);
   

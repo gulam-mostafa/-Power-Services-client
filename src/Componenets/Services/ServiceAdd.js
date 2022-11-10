@@ -2,8 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTitleDi } from '../../hooks/useTitleDi';
+
 
 const ServiceAdd = () => {
+    useTitleDi('Add Service')
     const [user, setUser] = useState();
     const handleAddUser = event => {
         event.preventDefault();

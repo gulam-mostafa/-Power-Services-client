@@ -1,9 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useTitleDi } from '../../hooks/useTitleDi';
 import ServicesCard from './ServicesCard';
 
 const Services = () => {
+    useTitleDi('Services')
     const [services , setServices] = useState([]);
     useEffect(() => {
         fetch('http://192.168.1.101:5000/services')

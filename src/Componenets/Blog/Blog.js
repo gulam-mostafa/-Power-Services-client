@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTitleDi } from '../../hooks/useTitleDi';
 
 const Blog = () => {
+    useTitleDi('Blog')
     return (
         <div className="my-3 w-10/12 m-auto text-xl ">
 

@@ -69,7 +69,9 @@ const Navbar = () => {
               </div>
             </ul>
           </div>
+         
           <Link to='/' className="btn btn-ghost text-green-500  normal-case lg:text-4xl   no-underline text-2xl md:text-4xl">Power Services</Link>
+          <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-electrical-energy-ecology-flaticons-lineal-color-flat-icons.png"/>
 
         </div>
 

@@ -16,7 +16,7 @@ const LimitData = () => {
       {
             services.map(service => <LimitCard
                 service={service}
-                key={service.id}></LimitCard>)
+                key={service._id}></LimitCard>)
         }
       </div>
    <Link to='/services' className='flex justify-center'>   <button className="btn btn-active btn-secondary w-1/4 my-4 mx-4 m-auto">See More Services</button></Link>

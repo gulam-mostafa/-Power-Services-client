@@ -3,8 +3,10 @@ import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTitleDi } from '../../hooks/useTitleDi';
 
 const Update = () => {
+  useTitleDi('Update')
     const  review = useLoaderData();
     console.log(review)
     const [user, setUser] = useState(review)
@@ -41,7 +43,7 @@ const Update = () => {
         setUser(newUser);
     }
     return (
-        <div className=' mt-20 mx-60 '>
+        <div className=' m-auto w-10/12 mt-5'>
              <form className='  ' onSubmit={updateReview}>
           <textarea onChange={handleInputChange} name='message' defaultValue={review.message} className="textarea textarea-accent w-full " placeholder="Please write a Review"></textarea>
   

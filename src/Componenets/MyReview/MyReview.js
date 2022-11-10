@@ -8,8 +8,10 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import MyReviewCard from './MyReviewCard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTitleDi } from '../../hooks/useTitleDi';
 
 const MyReview = () => {
+    useTitleDi('MyReview')
     const { user } = useContext(AuthContext)
     const [review, setReview] = useState([])
     console.log(review)

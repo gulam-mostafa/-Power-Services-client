@@ -5,8 +5,10 @@ import PeopleReviews from '../PeopleReviews/PeopleReviews';
 import WriteReview from '../WriteReview/WriteReview';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { useTitleDi } from '../../hooks/useTitleDi';
 
 const DetailsPage = () => {
+  useTitleDi('Details')
   const service = useLoaderData()
   const { title, _id, id, total, types, img, price, rating, description, } = service
   const { user } = useContext(AuthContext)

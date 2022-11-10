@@ -6,10 +6,13 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import logImg from './login .png'
+import { useTitleDi } from '../../hooks/useTitleDi';
+
+
 
 const Login = () => {
-  
-        
+
+  useTitleDi('Login')
   const [error, setError] = useState("");
   console.log(error);
 

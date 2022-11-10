@@ -29,8 +29,8 @@ const Navbar = () => {
 
         <div className="navbar-start ">
           <div className="dropdown ">
-            <label tabIndex={0} className="btn btn-ghost md:hidden ">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 bg-blue-500 rounded" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <label tabIndex={0} className="btn btn-ghost md:hidden  ">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 bg-black rounded" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M4 6h16M4 12h8m-8 6h16" /></svg>
 
 
             </label>
@@ -39,7 +39,12 @@ const Navbar = () => {
               <li><Link to='/home' className='text-red-400'>Home</Link></li>
 
               <li><Link to="/services">Services</Link></li>
+              
               <li><Link to="/blog">Blog</Link></li>
+              <Link to='/myreview' className='no-underline mx-2 text-xl   rounded px- my-1 hover:bg-gray-600 text-orange-500  '>Review</Link>
+              <Link to='/serviceadd' className='underline mx-2 text-xl  text-orange-500   rounded px- my-1 hover:bg-gray-600'>Add_Services</Link>
+
+
               <div className='flex flex-col m-auto'>
                 {user?.photoURL ? (
                   <img
@@ -60,6 +65,7 @@ const Navbar = () => {
                   :
                   (
                     <div className='flex'>
+                      
                       <li><Link to='/login' className='text-red-400'>Login</Link></li>
                       <li><Link to='/register' className='text-red-400'>Sign up</Link></li>
                     </div>

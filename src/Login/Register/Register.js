@@ -122,7 +122,7 @@ const Register = () => {
      <div className="form-control mt-6">
      <div className="form-control">
   <label className="cursor-pointer label">
-    <span className="label-text">Accept Terms And Condition</span>
+    <span className="label-text">Accept <Link className='text-blue-400 underline' to='/terms' >Terms And Condition</Link></span>
     <input  onClick={handleAccept} type="checkbox" className="checkbox checkbox-success" />
   </label>
 </div>

@@ -12,6 +12,7 @@ import Update from "../Componenets/Update/Update";
 import WriteReview from "../Componenets/WriteReview/WriteReview";
 import Login from "../Login/Login/Login";
 import Register from "../Login/Register/Register";
+import Terms from "../Login/Register/Terms";
 import PrivetRoutes from "./PrivetRoutes";
 
 
@@ -74,6 +75,11 @@ import PrivetRoutes from "./PrivetRoutes";
             {
               path: '/serviceadd',
               element: <PrivetRoutes><ServiceAdd></ServiceAdd></PrivetRoutes>
+            },
+            {
+              path: '/terms',
+              element: <Terms></Terms>
+
             }
         
           

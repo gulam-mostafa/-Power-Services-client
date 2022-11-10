@@ -4,11 +4,20 @@ import LimitCard from './LimitCard';
 
 const LimitData = () => {
     const [services , setServices] = useState([]);
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         fetch('http://192.168.1.101:5000/servicesthree')
         .then(res => res.json())
-        .then(data => setServices(data))
+        .then(data => {
+            setLoading(false);
+            setServices(data)
+        }) 
     })
+
+    if(loading){
+        return <h1 className='text-center'> <button className="btn  loading">Loading ...</button></h1>
+    }
+
     return (
         <div>
         <h2 className='text-center text-3xl font-bold text-orange-400'>Our  services  </h2>

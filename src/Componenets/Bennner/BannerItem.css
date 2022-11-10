@@ -9,8 +9,8 @@
   display: inline-block;
   background: linear-gradient(to right, #151515 0%, rgba(1, 1, 1, 0) 100%);
 }
-.cusWidth{
-    width: 40%;
+.cusWidth {
+  width: 40%;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 601px) {
@@ -18,9 +18,9 @@
     width: 100%;
     margin-top: 90px;
   }
-  .cusWidth{
+  .cusWidth {
     width: 60%;
-}
+  }
 }
 @media only screen and (max-width: 600px) and (min-width: 10px) {
   .hiddenText {
@@ -34,14 +34,13 @@
     font-size: 20px;
     margin-left: -70px;
     margin-top: -10px;
-    
   }
-  .cusWidth{
+  .cusWidth {
     width: 95%;
     margin-left: -80px;
     color: dimgrey;
     padding-bottom: 60px;
-}
+  }
 
   .powerColor {
     font-size: 40px;

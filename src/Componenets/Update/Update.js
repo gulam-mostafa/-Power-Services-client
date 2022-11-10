@@ -12,16 +12,12 @@ const Update = () => {
   // const { uid} = user
   useTitleDi('Update')
   const review = useLoaderData();
-
   console.log(review)
   const [users, setUser] = useState(review)
- 
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/myreview";
-
   const updateReview = event => {
-
     event.preventDefault();
     // console.log(user)
     fetch(`https://b6-a11-service-review-server-side.vercel.app/myreview/${review._id}`,
@@ -42,11 +38,8 @@ const Update = () => {
           alert('Updated successfully')
           navigate(from, { replace: true });
         }
-
       })
-
   }
-
   const handleInputChange = event => {
     const field = event.target.name;
     const value = event.target.value;
@@ -58,16 +51,10 @@ const Update = () => {
     <div className=' m-auto w-10/12 mt-5'>
       <form className='  ' onSubmit={updateReview}>
         <textarea onChange={handleInputChange} name='message' defaultValue={review.message} className="textarea textarea-accent w-full " placeholder="Please write a Review"></textarea>
-
         <br />
-
         <input className="btn btn-active btn-accent w-full " type="submit" value="Update Your Review" />
-
         <ToastContainer />
       </form>
-
-
-
     </div>
   );
 };

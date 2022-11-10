@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './MyreviewCard.css'
 import { ToastContainer, toast } from 'react-toastify';
-import img from './rose.png'
+
 
 const MyReviewCard = ({ comment, handleDelete }) => {
-    const {  serviceName, price, email, title, img, message, displayName, photoURL, _id } = comment;
-
+    const { serviceName, price, email, title, img, message, displayName, photoURL, _id } = comment;
 
     return (
         <div className='lg:w-1/2 flex justify-between m-auto bg-yellow-100 mb-6 rounded-xl'>

@@ -1,5 +1,4 @@
-import { data } from 'autoprefixer';
-import { comment } from 'postcss';
+
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -34,8 +33,8 @@ const MyReview = () => {
             })
             .then(data => {
                 // setLoading(false);
-                setReview(data)})
-
+                setReview(data)
+            })
 
     }, [user?.email])
 
@@ -49,7 +48,7 @@ const MyReview = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                   
+
                     if (data.deletedCount > 0) {
                         // alert(" delete successfully")
                         toast("delete successfully", {
@@ -57,33 +56,25 @@ const MyReview = () => {
                         });
                         const remaning = review.filter(revw => revw._id !== id)
                         setReview(remaning)
-                        
+
                     }
-
-
                 })
-
-
-
         }
     }
-    // if(loading){
-    //     return <h1 className='text-center'> <button className="btn  loading">Loading ...</button></h1>
-    // }
 
     return (
         <div className='m-auto'>
             <div className="users">
 
-            {review?.length === 0 ? (
-                   <div className='flex justify-center align-center'>  <h2 className='text-4xl mt-32 text-violet-600'> You Have No Review  </h2></div>
+                {review?.length === 0 ? (
+                    <div className='flex justify-center align-center'>  <h2 className='text-4xl mt-32 text-violet-600'> You Have No Review  </h2></div>
                 )
                     :
-                   <div>
-                   
-                     <h1 className='text-green-400 text-4xl text-center underline my-4'>Here is my {review.length} Reviews</h1>
+                    <div>
 
-                   </div>
+                        <h1 className='text-green-400 text-4xl text-center underline my-4'>Here is my {review.length} Reviews</h1>
+
+                    </div>
                 }
 
                 {review.map(comment => <MyReviewCard
@@ -93,7 +84,7 @@ const MyReview = () => {
                 ></MyReviewCard>)}
 
                 <div className='w-1/2 m-auto mt-20'>
-                   
+
                     <Link to='/services' className='w-full m-auto flex justify-center'> <Button className='btn  ' >Services</Button></Link>
                 </div>
             </div>

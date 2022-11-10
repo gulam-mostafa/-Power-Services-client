@@ -8,31 +8,28 @@ import ServicesCard from './ServicesCard';
 const Services = () => {
     useTitleDi('Services')
     const [loading, setLoading] = useState(true)
-    const [services , setServices] = useState([]);
+    const [services, setServices] = useState([]);
     useEffect(() => {
         fetch('https://b6-a11-service-review-server-side.vercel.app/services')
-        .then(res => res.json())
-        .then(data => {
-            
-            setServices(data)
-            setLoading(false);
-        })
-       
+            .then(res => res.json())
+            .then(data => {
+                setServices(data)
+                setLoading(false);
+            })
     })
-
-    if(loading){
+    if (loading) {
         return <h1 className='text-center'> <button className="btn  loading">Loading ...</button></h1>
     }
     return (
         <div>
             <h2 className='text-center text-3xl font-bold text-orange-400'>Our total {services.length} services  </h2>
-          <div className='grid grid-cols-1 m-auto md:grid-cols-2 lg;grid-cols-3 xl:grid-cols-3 mx-2 gap-2 '>
-          {
-                services.map(service => <ServicesCard
-                    service={service}
-                    key={service.id}></ServicesCard>)
-            }
-          </div>
+            <div className='grid grid-cols-1 m-auto md:grid-cols-2 lg;grid-cols-3 xl:grid-cols-3 mx-2 gap-2 '>
+                {
+                    services.map(service => <ServicesCard
+                        service={service}
+                        key={service.id}></ServicesCard>)
+                }
+            </div>
         </div>
     );
 };

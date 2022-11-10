@@ -12,13 +12,13 @@ const Blog = () => {
                 <div className="card border border-blue-500 px-2 mx-2">
                     <h1 className="text-center text-pink-400"> Difference between SQL and NoSQL?</h1>
                     <h4>
-                         <span className='text-orange-500'>SQL:</span> <br />
+                        <span className='text-orange-500'>SQL:</span> <br />
                         SQL or the Structured Query Language is the most common and popular programming language for the relational database management system. It is a language designed to extract, store, insert, delete, update and manage data for structured data and strategic analysis.
 
-                         is widely used by top tech companies like Facebook, Whatsapp, etc for data processing solutions. It is used for different types of RDBMS including Oracle, MySQL, SQLServer, etc.
+                        is widely used by top tech companies like Facebook, Whatsapp, etc for data processing solutions. It is used for different types of RDBMS including Oracle, MySQL, SQLServer, etc.
                     </h4>
                     <h4>
-                    <span className='text-orange-500'>NoSQL:</span> <br />
+                        <span className='text-orange-500'>NoSQL:</span> <br />
                         NoSQL database provides a mechanism for storage and retrieval of data that is modelled other than tabular form. It was introduced by Carl Stroz in the year 1998 called a Non-relational database. Now, it stands for Not only SQL. It is not limited to storing data in tables, instead, enables the big data to be stored in the structured, unstructured, semi-structured or polymorphic form.
                     </h4>
                 </div>
@@ -56,7 +56,7 @@ const Blog = () => {
                     <h4>
                         1. NodeJS :
                         NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development
-<br /> <br />
+                        <br /> <br />
 
                     </h4>
                     <h5 className='text-white'>

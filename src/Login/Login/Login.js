@@ -8,23 +8,16 @@ import { FaGithub } from "react-icons/fa";
 import logImg from './login .png'
 import { useTitleDi } from '../../hooks/useTitleDi';
 
-
-
 const Login = () => {
-
   useTitleDi('Login')
   const [error, setError] = useState("");
   // console.log(error);
-
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-
   const { providerLogin, logOut } = useContext(AuthContext);
-
   const googleProvider = new GoogleAuthProvider();
   const githubProbider = new GithubAuthProvider();
-
   const handleGithubSignIn = () => {
     providerLogin(githubProbider)
       .then((result) => {
@@ -33,9 +26,7 @@ const Login = () => {
           logOut()
           return alert('Email not Found from Git Hub')
         }
-
         console.log(user);
-
         // jwt token 
         const currentUser = {
           email: user.email
@@ -60,13 +51,11 @@ const Login = () => {
       })
       .catch((error) => console.log(error));
   };
-
   const handleGoogleSignIn = () => {
     providerLogin(googleProvider)
       .then((result) => {
         const user = result.user;
         console.log(user);
-
         // jwt token 
         const currentUser = {
           email: user.email
@@ -88,8 +77,6 @@ const Login = () => {
             navigate(from, { replace: true });
           })
         //end jwt token
-
-        
       })
       .catch((error) => console.log(error));
   };
@@ -107,9 +94,6 @@ const Login = () => {
         const currentUser = {
           email: user.email
         }
-
-
-
         console.log(currentUser);
         form.reset();
         setError("");
@@ -120,14 +104,12 @@ const Login = () => {
             'content-type': 'application/json'
           },
           body: JSON.stringify(currentUser)
-
         })
           .then(res => res.json())
           .then(data => {
             console.log(data)
             localStorage.setItem('token', data.token)
           })
-
         navigate(from, { replace: true });
       })
       .catch((e) => {
@@ -138,7 +120,6 @@ const Login = () => {
         setError(e.message);
       });
   };
-
 
   return (
     <div className='bg-base-100 '>
@@ -190,7 +171,6 @@ const Login = () => {
                   className="btn btn-danger"
                   type="button"
                   variant="info"
-
                 >
                   {" "}
                   <span>

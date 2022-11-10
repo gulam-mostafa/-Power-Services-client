@@ -1,3 +1,37 @@
+# About the site
+This is a Review website for a Electrician who have work local area,
+his work is electrical services, he work house wireing, air_condition repair
+installation, refrigerator repair and setup etc work.
+
+# Some  Point about this page how to making this site.
+
+* I have used react js library for this site making. and i also use tailwind css framework. so that work single page website
+
+* This Website is hosting on firebase server. for very high security
+
+* Authentication system is firebase authentication and git hub authentication. that user can  directly register.
+
+* i have used mongodb database, all data are stored mongodb database. that user cant write a review and that data will be stored at mongodb database.
+* i have deploy server site on vercel server.
+* this web site is responsive for desktop , tablet and mobile,
+
+# Live site Link: 
+https://service-review-9125a.web.app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

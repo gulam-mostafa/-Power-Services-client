@@ -2,11 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const PeopleReviews = ({ serviceId }) => {
-
     const { user } = useContext(AuthContext)
-
     const [review, setReview] = useState([])
-
 
     useEffect(() => {
         fetch(`https://b6-a11-service-review-server-side.vercel.app/review/${serviceId}`)
@@ -15,7 +12,6 @@ const PeopleReviews = ({ serviceId }) => {
                 setReview(data)
             )
     }, [serviceId])
-   
 
     return (
         <div className='w-10/12  m-auto border border-red -400  my-4 rounded-xl'>
@@ -32,18 +28,11 @@ const PeopleReviews = ({ serviceId }) => {
                                 </div>
                             </div>
                             <div className="flex items-center mb-1">
-
                             </div>
-
-
                         </article>
                     </div>
-
                 )}
             </div>
-
-
-
         </div>
     );
 };

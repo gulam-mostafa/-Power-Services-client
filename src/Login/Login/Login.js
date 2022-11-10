@@ -85,13 +85,11 @@ const Login = () => {
           .then(data => {
             console.log(data)
             localStorage.setItem('token', data.token)
+            navigate(from, { replace: true });
           })
         //end jwt token
 
-
-
-
-        navigate(from, { replace: true });
+        
       })
       .catch((error) => console.log(error));
   };
@@ -163,7 +161,7 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="text" placeholder="password" name="password" className="input input-bordered" />
+                <input type="password" placeholder="password" name="password" className="input input-bordered" />
                 <label className="label">
                   <Link to="/home" className="label-text-alt link link-hover"></Link>
                 </label>

@@ -194,7 +194,7 @@ const Register = () => {
        <label className="label">
          <span className="label-text">Password</span>
        </label>
-       <input type="text" placeholder="password" name="password" className="input input-bordered" />
+       <input type="password" placeholder="password" name="password" className="input input-bordered" />
        
      </div>
      <div className="form-control mt-6">
@@ -205,7 +205,7 @@ const Register = () => {
   </label>
 </div>
 
-       <button className="btn btn-primary"  disabled={!accepted}>Login</button>
+       <button className="btn btn-primary"  disabled={!accepted}>Sign Up</button>
        <label className="label">
          <h1  className="">Already Sign Up? please <Link className='text-blue-400 label-text-alt link link-hover text-xl' to='/login'>Login</Link></h1>
        </label>

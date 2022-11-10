@@ -16,7 +16,7 @@ const MyReview = () => {
     useTitleDi('MyReview')
     const { user, logOut, } = useContext(AuthContext)
     const [review, setReview] = useState([])
-    const [loading, setLoading] = useState(true)
+    // const [loading, setLoading] = useState(true)
 
     console.log(review)
 
@@ -33,7 +33,7 @@ const MyReview = () => {
                 return res.json()
             })
             .then(data => {
-                setLoading(false);
+                // setLoading(false);
                 setReview(data)})
 
 
@@ -67,9 +67,9 @@ const MyReview = () => {
 
         }
     }
-    if(loading){
-        return <h1 className='text-center'> <button className="btn  loading">Loading ...</button></h1>
-    }
+    // if(loading){
+    //     return <h1 className='text-center'> <button className="btn  loading">Loading ...</button></h1>
+    // }
 
     return (
         <div className='m-auto'>

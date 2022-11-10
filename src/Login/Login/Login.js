@@ -43,7 +43,7 @@ const Login = () => {
         console.log(currentUser);
         setError("");
         // get jwt token 
-        fetch('http://192.168.1.101:5000/jwt', {
+        fetch('https://b6-a11-service-review-server-side.vercel.app/jwt', {
           method: "POST",
           headers: {
             'content-type': 'application/json'
@@ -74,7 +74,7 @@ const Login = () => {
         console.log(currentUser);
         setError("");
         // get jwt toket 
-        fetch('http://192.168.1.101:5000/jwt', {
+        fetch('https://b6-a11-service-review-server-side.vercel.app/jwt', {
           method: "POST",
           headers: {
             'content-type': 'application/json'
@@ -116,7 +116,7 @@ const Login = () => {
         form.reset();
         setError("");
         // get jwt toket 
-        fetch('http://192.168.1.101:5000/jwt', {
+        fetch('https://b6-a11-service-review-server-side.vercel.app/jwt', {
           method: "POST",
           headers: {
             'content-type': 'application/json'

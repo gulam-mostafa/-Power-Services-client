@@ -11,7 +11,7 @@ const ServiceAdd = () => {
     const handleAddUser = event => {
         event.preventDefault();
         console.log(user)
-        fetch('http://192.168.1.101:5000/users',{
+        fetch('https://b6-a11-service-review-server-side.vercel.app/users',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

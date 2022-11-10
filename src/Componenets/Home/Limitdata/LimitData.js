@@ -6,7 +6,7 @@ const LimitData = () => {
     const [services , setServices] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('http://192.168.1.101:5000/servicesthree')
+        fetch('https://b6-a11-service-review-server-side.vercel.app/servicesthree')
         .then(res => res.json())
         .then(data => {
             setLoading(false);
@@ -28,7 +28,7 @@ const LimitData = () => {
                 key={service._id}></LimitCard>)
         }
       </div>
-   <Link to='/services' className='flex justify-center'>   <button className="btn btn-active btn-secondary w-1/4 my-4 mx-4 m-auto">See More Services</button></Link>
+   <Link to='/services' className='flex justify-center'>   <button className="btn btn-active btn-secondary w-1/2 lg:w-1/4 my-4 mx-4 m-auto">See More Services</button></Link>
     </div>
     );
 };

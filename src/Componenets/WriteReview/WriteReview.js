@@ -34,7 +34,7 @@ const WriteReview = () => {
           photoURL,
           img,
         }
-        fetch('http://192.168.1.101:5000/reviews', {
+        fetch('https://b6-a11-service-review-server-side.vercel.app/reviews', {
           method: "POST",
           headers: {
             'content-type': 'application/json'

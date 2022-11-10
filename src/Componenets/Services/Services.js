@@ -10,7 +10,7 @@ const Services = () => {
     const [loading, setLoading] = useState(true)
     const [services , setServices] = useState([]);
     useEffect(() => {
-        fetch('http://192.168.1.101:5000/services')
+        fetch('https://b6-a11-service-review-server-side.vercel.app/services')
         .then(res => res.json())
         .then(data => {
             

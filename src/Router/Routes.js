@@ -55,7 +55,7 @@ import PrivetRoutes from "./PrivetRoutes";
             {
               path: "/detailsPage/:id",
               element: <DetailsPage></DetailsPage>,
-              loader: ({params}) => fetch(`http://192.168.1.101:5000/services/${params.id}`)
+              loader: ({params}) => fetch(`https://b6-a11-service-review-server-side.vercel.app/services/${params.id}`)
             },
             {
               path: '/myreview',
@@ -65,12 +65,12 @@ import PrivetRoutes from "./PrivetRoutes";
             {
               path: '/writereview:id',
               element: <WriteReview></WriteReview>,
-              loader: ({params}) => fetch(`http://192.168.1.101:5000/services/${params.id}`)
+              loader: ({params}) => fetch(`https://b6-a11-service-review-server-side.vercel.app/services/${params.id}`)
             },
             {
               path: '/update/:id',
               element: <Update></Update>,
-              loader: ({params}) => fetch(`http://192.168.1.101:5000/myreview/${params.id}`)
+              loader: ({params}) => fetch(`https://b6-a11-service-review-server-side.vercel.app/myreview/${params.id}`)
             },
             {
               path: '/serviceadd',

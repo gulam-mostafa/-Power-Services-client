@@ -23,7 +23,7 @@ const LimitCard = ({service}) => {
           </h2>
           <p>{description.slice(0, 100) + ' ...'}</p>
           <div className="card-actions justify-between">
-            <div className="badge badge-outline">Rating {rating}</div> 
+            <div className="badge badge-outline">Rating {rating} / 5</div> 
             <div className="badge badge-outline">Cost $ {price}</div>
             
           </div>

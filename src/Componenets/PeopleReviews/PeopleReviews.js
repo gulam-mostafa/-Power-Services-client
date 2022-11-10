@@ -9,7 +9,7 @@ const PeopleReviews = ({ serviceId }) => {
 
 
     useEffect(() => {
-        fetch(`http://192.168.1.101:5000/review/${serviceId}`)
+        fetch(`https://b6-a11-service-review-server-side.vercel.app/review/${serviceId}`)
             .then(res => res.json())
             .then(data =>
                 setReview(data)

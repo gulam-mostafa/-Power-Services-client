@@ -18,7 +18,7 @@ const Register = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
   
-    const { providerLogin, updateUserProfile } = useContext(AuthContext);
+    const { providerLogin, updateUserProfile, logOut } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const githubProbider = new GithubAuthProvider();
   
@@ -27,6 +27,34 @@ const Register = () => {
         .then((result) => {
           const user = result.user;
           console.log(user);
+          console.log(user?.email);
+          console.log(user.email);
+          if(user.email==null){
+            logOut()
+            return alert(' Email not Found from Git Hub')
+           
+           
+          }
+
+          const currentUser = {
+            email: user.email
+          }
+          console.log(currentUser);
+          setError("");
+          // get jwt toket 
+          fetch('http://192.168.1.101:5000/jwt',{
+            method: "POST",
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+          })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+            localStorage.setItem('token' , data.token)
+          })
+          //end jwt token
           navigate(from, { replace: true });
         })
         .catch((error) => console.log(error));
@@ -37,6 +65,29 @@ const Register = () => {
         .then((result) => {
           const user = result.user;
           console.log(user);
+
+          const currentUser = {
+            email: user.email
+          }
+          console.log(currentUser);
+          setError("");
+          // get jwt toket 
+          fetch('http://192.168.1.101:5000/jwt',{
+            method: "POST",
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+          })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+            localStorage.setItem('token' , data.token)
+          })
+          //end jwt token
+
+
+
           navigate(from, { replace: true });
         })
         .catch((error) => console.error(error, error.message));
@@ -58,6 +109,33 @@ const Register = () => {
           console.log(user.photoURL);
           form.reset();
           setError("");
+
+
+          const currentUser = {
+            email: user.email
+          }
+          console.log(currentUser);
+          setError("");
+          // get jwt toket 
+          fetch('http://192.168.1.101:5000/jwt',{
+            method: "POST",
+            headers: {
+              'content-type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+          })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+            localStorage.setItem('token' , data.token)
+          })
+          //end jwt token
+
+
+
+
+
+
           navigate(from, { replace: true });
           handleUpdateUserProfile(name, photoURL);
         })

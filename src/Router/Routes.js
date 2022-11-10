@@ -80,7 +80,16 @@ import PrivetRoutes from "./PrivetRoutes";
               path: '/terms',
               element: <Terms></Terms>
 
-            }
+            },
+            {
+              path: "*",
+              element: (
+                <div className=" vh-100 bg-light card m-5 pt-5 text-center text-warning ">
+                  {" "}
+                  <h1 className="mt-5 pt-5">This Content not Found <br /><span className="text-8xl text-red-500">404</span> </h1>
+                </div>
+              ),
+            },
         
           
           

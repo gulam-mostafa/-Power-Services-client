@@ -20,7 +20,7 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const { providerLogin } = useContext(AuthContext);
+  const { providerLogin,logOut } = useContext(AuthContext);
 
   const googleProvider = new GoogleAuthProvider();
   const githubProbider = new GithubAuthProvider();
@@ -29,7 +29,33 @@ const Login = () => {
     providerLogin(githubProbider)
       .then((result) => {
         const user = result.user;
+        if(user?.email===null){
+          logOut()
+         return alert('Email not Found from Git Hub')
+        }
+        
         console.log(user);
+
+// jwt token 
+        const currentUser = {
+          email: user.email
+        }
+        console.log(currentUser);
+        setError("");
+        // get jwt token 
+        fetch('http://192.168.1.101:5000/jwt',{
+          method: "POST",
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(currentUser)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          localStorage.setItem('token' , data.token)
+        })
+        //end jwt token
         navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
@@ -40,6 +66,31 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+
+        // jwt token 
+        const currentUser = {
+          email: user.email
+        }
+        console.log(currentUser);
+        setError("");
+        // get jwt toket 
+        fetch('http://192.168.1.101:5000/jwt',{
+          method: "POST",
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(currentUser)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          localStorage.setItem('token' , data.token)
+        })
+        //end jwt token
+
+
+
+        
         navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));

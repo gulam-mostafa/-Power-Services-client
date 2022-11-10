@@ -12,7 +12,7 @@ import { useTitleDi } from '../../hooks/useTitleDi';
 
 const MyReview = () => {
     useTitleDi('MyReview')
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const [review, setReview] = useState([])
     console.log(review)
     useEffect(() => {
@@ -21,7 +21,12 @@ const MyReview = () => {
                 authorization: `bearer ${localStorage.getItem('token')}`
             }
         })
-            .then(res => res.json())
+            .then(res => {
+                if(res.status === 401 || res.status === 403){
+                    logOut()
+                }
+                return res.json()
+            })
             .then(data => setReview(data))
 
 

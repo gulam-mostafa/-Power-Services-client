@@ -113,6 +113,7 @@ const Register = () => {
           email: user.email
         }
         console.log(currentUser);
+        
         setError("");
         // get jwt toket 
         fetch('https://b6-a11-service-review-server-side.vercel.app/jwt', {
@@ -135,7 +136,8 @@ const Register = () => {
         console.log(e);
         setError(e.message);
       });
-  };
+  }; 
+  // handle submit end 
 
   const handleUpdateUserProfile = (name, photoURL) => {
     const profile = {

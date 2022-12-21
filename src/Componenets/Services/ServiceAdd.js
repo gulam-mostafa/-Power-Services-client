@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -6,6 +6,9 @@ import { useTitleDi } from '../../hooks/useTitleDi';
 
 const ServiceAdd = () => {
     useTitleDi('Add Service')
+    // const ref = useRef('No text');
+    const [ref , setRef] = useState('Text Not Found')
+
     const [user, setUser] = useState();
 
     const handleAddUser = event => {
@@ -48,21 +51,21 @@ const ServiceAdd = () => {
             <form onSubmit={handleAddUser} action="" className='lg:w-1/2 w-11/12  m-auto ' >
 
                 <p className='text-red-600'>1. Id "Service Number"</p>
-                <input onBlur={HandleInputBlur} type="text" placeholder="Id" name='id (id Means Service Number)' className="input input-bordered input-warning w-full mx-1 p-1 " />
+                <input onBlur={HandleInputBlur} type="text" placeholder="Id" name='id (id Means Service Number)' defaultValue={'10'} className="input input-bordered input-warning w-full mx-1 p-1 " />
 
                 <p className='text-red-600'>2. Total Service done"</p>
-                <input onBlur={HandleInputBlur} type="text" placeholder="total service done" name='total' className="input input-bordered input-warning w-full mx-1 p-1 " />
+                <input onBlur={HandleInputBlur} type="text" placeholder="total service done" name='total' defaultValue={'4'} className="input input-bordered input-warning w-full mx-1 p-1 " />
                 <p className='text-red-600'>3. service Type new or Old</p>
-                <input onBlur={HandleInputBlur} type="text" placeholder="types" name='types' className="input input-bordered input-warning w-full mx-1 p-1 " />
+                <input onBlur={HandleInputBlur} defaultValue={'new'} type="text" placeholder="types" name='types' className="input input-bordered input-warning w-full mx-1 p-1 " />
                 <p className='text-red-600'>4. Service related Image URL</p>
-                <input onBlur={HandleInputBlur} type="text" placeholder="img" name='img' className="input input-bordered input-warning w-full mx-1 p-1 " />
+                <input onBlur={HandleInputBlur} type="text" placeholder="img" name='img' className="input input-bordered  input-warning w-full mx-1 p-1 "  defaultValue={'https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg'}/>
                 <p className='text-red-600'>5. Service Cost</p>
                 <input onBlur={HandleInputBlur} type="text" placeholder="price" name='price' className="input input-bordered input-warning w-full mx-1 p-1 " />
                 <p className='text-red-600'>6. Service Rating</p>
-                <input onBlur={HandleInputBlur} type="text" placeholder="rating" name='rating' className="input input-bordered input-warning w-full mx-1 p-1 " />
+                <input onBlur={HandleInputBlur} type="text" placeholder="rating" name='rating' className="input input-bordered input-warning w-full mx-1 p-1 "  defaultValue={'No title found'} />
 
                 <p className='text-red-600'>7. Service Description</p>
-                <input onBlur={HandleInputBlur} type="text" placeholder="description" name='description' className="input input-bordered input-warning w-full mx-1 p-1 " />
+                <input onBlur={HandleInputBlur}  required type="text" placeholder="description" name='description' className="input input-bordered input-warning w-full mx-1 p-1 "  />
                 <p className='text-red-600'>8. Service Title or name</p>
                 <input onBlur={HandleInputBlur} type="text" placeholder="Title" name='title' className="input input-bordered input-warning w-full mx-1 p-1 " />
                 <br />

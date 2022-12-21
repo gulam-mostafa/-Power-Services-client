@@ -121,7 +121,7 @@ const Navbar = () => {
           }
 
           <div>
-            <Link to="/home" className='no-underline mx-2 text-xl  text-blue-400 font-bold  rounded px- my-1 hover:bg-gray-600'>Home</Link>
+            <Link to="/home" className='no-underline mx-2 text-xl  text-orange-500  font-bold  rounded px- my-1 hover:bg-gray-600'>Home</Link>
 
             <Link to='/services' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-gray-600'>Services</Link>
             <Link to='blog' className='no-underline mx-2 text-xl  text-orange-500    rounded px- my-1 hover:bg-gray-600'>Blog</Link>
